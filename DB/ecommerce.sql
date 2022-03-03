@@ -3,6 +3,8 @@
 /* Date de cr�ation :  28/02/2022 13:43:56                      */
 /*==============================================================*/
 
+CREATE DATABASE brief_14;
+USE brief_14;
 
 drop table if exists Client;
 
