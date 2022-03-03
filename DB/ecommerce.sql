@@ -72,6 +72,6 @@ alter table Commande add constraint FK_association1 foreign key (idClient)
 alter table DetailsCommande add constraint FK_association2 foreign key (idCommande)
       references Commande (idCommande) on delete restrict on update restrict;
 
-alter table DetailsCommande add constraint FK_association2 foreign key (idProduit)
+alter table DetailsCommande add constraint FK_association3 foreign key (idProduit)
       references Produit (idProduit) on delete restrict on update restrict;
 
