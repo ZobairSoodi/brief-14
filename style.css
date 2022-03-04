@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;500&display=swap');
+
+
+/*M A I N  S T Y L E */
+
+
+
+body {
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+    font-weight: 400;
+    font-family: 'Reem Kufi', sans-serif;
+}
+main h1 {
+    color: #522D6D;
+}
+header img {
+    width: 100%;
+}
+.best-seller-area {
+    background: #CACFCB;
+    background: linear-gradient(180deg, #CACFCB 0%, rgba(0,212,255,0) 100%);    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} 
+.best-seller-photos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.best-seller-photos img {
+    background-color: rgb(255, 255, 255);
+    padding: 10PX;
+    width: 200px;
+    height: 200px;
+}
+.best-seller-area h1 {
+    margin: 72px;
+}
