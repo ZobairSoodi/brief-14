@@ -8,6 +8,26 @@ login_btn.addEventListener("click", ()=>{
     login_btn.classList.remove("form_inactive_login");
     signup_btn.classList.add("form_inactive_signup");
 })
+// login_btn.addEventListener("mouseover",()=>{
+//     if(login_btn.classList.contains("form_inactive_login")){
+//         login_btn.classList.add("hover_button");
+//     }
+// })
+// login_btn.addEventListener("mouseout",()=>{
+//     if(login_btn.classList.contains("form_inactive_login")){
+//         login_btn.classList.remove("hover_button");
+//     }
+// })
+function add_button_hover(btn1){
+    if(btn1.classList.contains("form_inactive_login")){
+        btn1.classList.add("hover_button");
+    }
+}
+function remove_button_hover(btn1){
+    if(btn1.classList.contains("hover_button")){
+        btn1.classList.remove("hover_button");
+    }
+}
 signup_btn.addEventListener("click", ()=>{
     signup_form.style.zIndex = 1;
     signup_btn.classList.remove("form_inactive_signup");

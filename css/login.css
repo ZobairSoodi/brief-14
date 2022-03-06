@@ -4,6 +4,7 @@
 body{
     margin: 0;
     padding: 0;
+    background-color: #E5E5E5;
 }
 
 /* /////////////////////////////////////// */
@@ -23,7 +24,8 @@ body{
     font-family: 'Reem Kufi', sans-serif;
     padding: 20px 0;
     border: none;
-    background-color: #E3DFD7;
+    background-color: #ffffff;
+    color: #C9B8A8;
 }
 form div input{
     padding: 0 0 0 15px;
@@ -41,14 +43,14 @@ form div input{
     align-items: center;
     justify-content: center;
     width: 60%;
-    background-color: #E3DFD7;
+    background-color: #ffffff;
     height: 80vh;
     position: relative;
 }
 
 #forms_div form{
     width: 80%;
-    background-color: #E3DFD7;
+    background-color: #ffffff;
     display: flex;
     flex-wrap: wrap;
 }
@@ -94,12 +96,13 @@ form div input::placeholder{
 }
 .form_inactive_signup{
     background-color: #D1CBC5 !important;
+    color: #FFFFFF !important;
     box-shadow: 5px -5px 1px 0px #00000040 inset;
 }
 .form_inactive_login{
     background-color: #D1CBC5 !important;
     box-shadow: -5px -5px 1px 0px #00000040 inset;
-
+    color: #FFFFFF !important;
 }
 #signup_form{
     flex-direction: row;
@@ -120,4 +123,8 @@ form div input::placeholder{
 }
 .second_input{
     margin-left: 10%;
+}
+
+.hover_button{
+    background-color: black !important;
 }
