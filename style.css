@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@300&family=Indie+Flower&family=Reem+Kufi&display=swap');
+body {
+    margin: 0;
+    font-family: 'Reem Kufi', sans-serif;
+}
+.category-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.category-list p {
+    margin: 0px 40px;
+    font-size: 24px;
+}
+.product-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+#product-image {
+    width: 482px;
+}
+#lable-area {
+    width: 50%;
+}
+#unics-num {
+    width: 40px;
+    height: 40px;
+}
+.control {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.num-control {
+    width: 25px;
+    height: 25px;
+}
+.buy-part {
+    display: flex;
+    flex-direction: row;
+}
+.other-products {
+
+}
+.recomanded-products {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.recomanded-products img {
+    width: 215px;
+    height: 215px;
+}
