@@ -368,13 +368,13 @@ header img {
 
 #Submit{
     width: 170px;
-    background-color: #c284ff;
+    background-color: #949191af;
     border: none;
     height: 30px;
     cursor: pointer;
 }
 #Submit:hover{
-    background-color:#e3c7ff;
+    background-color:#94919146;
 
 }
 #subscribe{
@@ -390,4 +390,13 @@ header img {
     height: 25px;
     margin: 2px;
 }
+form input{
+border: none;
+background-color: #94919169;
 
+}
+textarea{
+    background-color: #94919173;
+    border: none;
+
+}
