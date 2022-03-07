@@ -53,6 +53,7 @@ form div input{
     background-color: #ffffff;
     display: flex;
     flex-wrap: wrap;
+    transition: all 0.2s;
 }
 #login_form{
     flex-direction: row;
@@ -93,6 +94,7 @@ form div input::placeholder{
     height: 100%;
     width: 100%;
     z-index: -1;
+    opacity: 0;
 }
 .form_inactive_signup{
     background-color: #D1CBC5 !important;
@@ -126,5 +128,9 @@ form div input::placeholder{
 }
 
 .hover_button{
-    background-color: black !important;
+    background-color: #9d9894 !important;
+    transition: all 0.2s cubic-bezier(0.52, 0.08, 0.9, 0.62);
+}
+#form_btns{
+    transition: none;
 }

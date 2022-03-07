@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(149, 121, 175);
+    font-family: 'Reem Kufi', sans-serif;
+    font-size: 24px;
+}
+nav>div{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    padding: 20px 0;
+}
+nav ul{
+    margin: 0;
+}
+nav li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 30px;
+}
+nav span{
+    margin-left: 10px;
+}
