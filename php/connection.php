@@ -16,7 +16,7 @@
             $conn->query($sql);
         }
         else{
-            
+            header("location:")
         }
         
     }
