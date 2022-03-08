@@ -134,3 +134,15 @@ form div input::placeholder{
 #form_btns{
     transition: none;
 }
+form i{
+    color: red;
+}
+.error_hover{
+    position: absolute;
+    background-color: white;
+    border: solid 2px red;
+    display: none;
+}
+form i:hover + .error_hover{
+    display: block;
+}
