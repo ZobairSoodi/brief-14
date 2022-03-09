@@ -1,6 +1,6 @@
 <?php
     session_start();
-    $conn = new mysqli("localhost", "root", "", "brief_14");    
+    $conn = new mysqli("localhost", "root", "", "brief14");    
     if(isset($_POST["signup_submit"])){
         $error = false;
         $_SESSION["error_signup"] = false;

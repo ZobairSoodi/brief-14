@@ -19,7 +19,7 @@ drop table if exists Produit;
 /*==============================================================*/
 create table Client
 (
-   idClient             int not null,
+   idClient             int not null AUTO_INCREMENT,
    nom                  varchar(254),
    prenom               varchar(254),
    adresse              varchar(254),
