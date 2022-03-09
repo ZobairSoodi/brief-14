@@ -3,6 +3,7 @@
     $conn = new mysqli("localhost", "root", "", "brief_14");    
     if(isset($_POST["signup_submit"])){
         $error = false;
+        $_SESSION["error_signup"] = false;
         $fname = $_POST["fname"];
         $_SESSION["error_fname"] = "";
         $lname = $_POST["lname"];
@@ -46,7 +47,7 @@
                 $_SESSION["error_phone"] = "phone number should contain 10 digits!";
                 $error = true;
             }
-            if(!preg_match("/[a-zA-Z0-9]*/", $adress)){
+            if(!preg_match("/[a-zA-Z0-9]+/", $adress)){
                 $_SESSION["error_adress"] = "invalid adress format!";
                 $error = true;
             }
@@ -60,7 +61,7 @@
             $_SESSION["email_exists_error"] = "Email already exists!";
             header("location: login.php");
         }
-        
+        $_SESSION["error_signup"] = $error;
     }
     if(isset($_POST["login_submit"])){
         $email = $_POST["email_login"];

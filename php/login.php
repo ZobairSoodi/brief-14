@@ -24,8 +24,19 @@
 <body>
     <div id="form_parent">
         <div id="form_btns">
-            <button id="login_btn" onmouseover="add_button_hover(this)" onmouseout="remove_button_hover(this)">LOGIN</button>
-            <button id="signup_btn" onmouseover="add_button_hover(this)" onmouseout="remove_button_hover(this)" class="form_inactive_signup">SIGN UP</button>
+            <button id="login_btn" onmouseover="add_button_hover(this)" onmouseout="remove_button_hover(this)"
+            <?php
+                if($_SESSION["error_signup"] && $_SESSION["error_signup"]==true){
+                    echo "class='form_inactive_login'";
+                }
+            ?>
+            >LOGIN</button>
+            <button id="signup_btn" onmouseover="add_button_hover(this)" onmouseout="remove_button_hover(this)" 
+            <?php  
+                if($_SESSION["error_signup"] && $_SESSION["error_signup"]==false){
+                    echo "class='form_inactive_signup'";
+                }
+            ?>>SIGN UP</button>
         </div>
         <div id="forms_div">
             <form id="login_form" action="connection.php" method="POST">
@@ -42,37 +53,25 @@
                     <label for="fname">First Name 
                     <span>
                         <?php
-                        if(isset($_SESSION["error_fname"]) && $_SESSION["error_fname"]!=""){
-                            echo "<i class='fa-solid fa-triangle-exclamation'></i><span class='error_hover'>";
-                            echo $_SESSION["error_fname"];
-                            echo "</span>";
-                        }
+                        show_error("error_fname");
                     ?></span>
-                    </span></label><input type="text" name="fname" id="fname" placeholder="First Name" required minlength="8">
+                    </span></label><input type="text" name="fname" id="fname" placeholder="First Name">
                 </div>
                 <div class="is_double_input">
                     <label class="second_input" for="lname">Last Name
                     <span>
                         <?php
-                        if(isset($_SESSION["error_lname"]) && $_SESSION["error_lname"]!=""){
-                            echo "<i class='fa-solid fa-triangle-exclamation'></i><span class='error_hover'>";
-                            echo $_SESSION["error_lname"];
-                            echo "</span>";
-                        }
+                        show_error("error_lname");
                     ?></span>
                     </span>
-                    </label><input class="second_input" type="text" name="lname" id="lname" placeholder="Last Name" minlength="8">
+                    </label><input class="second_input" type="text" name="lname" id="lname" placeholder="Last Name">
                 </div>
                 <div>
                     <label for="email_signup">Email
                     <span>
                         <?php
-                        if(isset($_SESSION["error_email"]) && $_SESSION["error_email"]!=""){
-                            echo "<i class='fa-solid fa-triangle-exclamation'></i><span class='error_hover'>";
-                            echo $_SESSION["error_email"];
-                            echo "</span>";
-                        }
-                    ?></span>
+                            show_error("error_email");
+                        ?></span>
                     </span>
                     </label><input type="email" name="email_signup" id="email_signup" placeholder="Email">
                 </div>
@@ -80,11 +79,7 @@
                     <label for="pass_signup">Password
                     <span>
                         <?php
-                        if(isset($_SESSION["error_pass"]) && $_SESSION["error_pass"]!=""){
-                            echo "<i class='fa-solid fa-triangle-exclamation'></i><span class='error_hover'>";
-                            echo $_SESSION["error_pass"];
-                            echo "</span>";
-                        }
+                        show_error("error_pass");
                     ?></span>
                     </span>
                     </label><input type="password" name="pass_signup" id="pass_signup" placeholder="Password" minlength="8">
@@ -93,12 +88,8 @@
                     <label for="pass_confirm">Confirsm Password
                     <span>
                         <?php
-                        if(isset($_SESSION["error_pass_confirm"]) && $_SESSION["error_pass_confirm"]!=""){
-                            echo "<i class='fa-solid fa-triangle-exclamation'></i><span class='error_hover'>";
-                            echo $_SESSION["error_pass_confirm"];
-                            echo "</span>";
-                        }
-                    ?></span>
+                            show_error("error_pass_confirm");
+                        ?></span>
                     </span>
                     </label><input type="password" name="pass_confirm" id="pass_confirm" placeholder="Confirsm Password">
                 </div>
@@ -106,12 +97,8 @@
                     <label for="phone">Phone Number
                     <span>
                         <?php
-                        if(isset($_SESSION["error_phone"]) && $_SESSION["error_phone"]!=""){
-                            echo "<i class='fa-solid fa-triangle-exclamation'></i><span class='error_hover'>";
-                            echo $_SESSION["error_phone"];
-                            echo "</span>";
-                        }
-                    ?></span>
+                            show_error("error_phone")
+                        ?></span>
                     </span>
                     </label><input type="text" name="phone" id="phone" placeholder="Phone Number">
                 </div>
@@ -119,12 +106,8 @@
                     <label class="second_input" for="adress">Adress
                     <span>
                         <?php
-                        if(isset($_SESSION["error_adress"]) && $_SESSION["error_adress"]!=""){
-                            echo "<i class='fa-solid fa-triangle-exclamation'></i><span class='error_hover'>";
-                            echo $_SESSION["error_adress"];
-                            echo "</span>";
-                        }
-                    ?></span>
+                            show_error("error_adress");
+                        ?></span>
                     </span>
                     </label><input class="second_input" type="text" name="adress" id="adress" placeholder="Adress">
                 </div>
@@ -135,5 +118,23 @@
         </div>
     </div>
     <script src="../js/login.js"></script>
+    
+    <?php
+        if($_SESSION["error_signup"] && $_SESSION["error_signup"]==true){
+            echo "
+            <script>
+            signup_form.style.zIndex = 1;
+            signup_form.style.opacity = 1;
+            login_form.style.opacity = 0;
+            signup_btn.classList.remove('form_inactive_signup');
+            login_btn.classList.add('form_inactive_login');
+            signup_btn.style.backgroundColor = 'white';
+            if(signup_btn.classList.contains('hover_button')){
+                signup_btn.classList.remove('hover_button');
+            }
+        </script>
+            ";
+        }
+    ?>
 </body>
 </html>
