@@ -1,4 +1,13 @@
-<?php session_start(); ?>
+<?php
+    session_start(); 
+    function show_error($er){
+        if(isset($_SESSION[$er]) && $_SESSION[$er]!=""){
+            echo "<i class='fa-solid fa-triangle-exclamation'></i><span class='error_hover'>";
+            echo $_SESSION[$er];
+            echo "</span>";
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,7 +42,7 @@
                     <label for="fname">First Name 
                     <span>
                         <?php
-                        if($_SESSION["error_fname"]!=""){
+                        if(isset($_SESSION["error_fname"]) && $_SESSION["error_fname"]!=""){
                             echo "<i class='fa-solid fa-triangle-exclamation'></i><span class='error_hover'>";
                             echo $_SESSION["error_fname"];
                             echo "</span>";
@@ -45,7 +54,7 @@
                     <label class="second_input" for="lname">Last Name
                     <span>
                         <?php
-                        if($_SESSION["error_lname"]!=""){
+                        if(isset($_SESSION["error_lname"]) && $_SESSION["error_lname"]!=""){
                             echo "<i class='fa-solid fa-triangle-exclamation'></i><span class='error_hover'>";
                             echo $_SESSION["error_lname"];
                             echo "</span>";
@@ -58,7 +67,7 @@
                     <label for="email_signup">Email
                     <span>
                         <?php
-                        if($_SESSION["error_email"]!=""){
+                        if(isset($_SESSION["error_email"]) && $_SESSION["error_email"]!=""){
                             echo "<i class='fa-solid fa-triangle-exclamation'></i><span class='error_hover'>";
                             echo $_SESSION["error_email"];
                             echo "</span>";
@@ -71,7 +80,7 @@
                     <label for="pass_signup">Password
                     <span>
                         <?php
-                        if($_SESSION["error_pass"]!=""){
+                        if(isset($_SESSION["error_pass"]) && $_SESSION["error_pass"]!=""){
                             echo "<i class='fa-solid fa-triangle-exclamation'></i><span class='error_hover'>";
                             echo $_SESSION["error_pass"];
                             echo "</span>";
@@ -84,7 +93,7 @@
                     <label for="pass_confirm">Confirsm Password
                     <span>
                         <?php
-                        if($_SESSION["error_pass_confirm"]!=""){
+                        if(isset($_SESSION["error_pass_confirm"]) && $_SESSION["error_pass_confirm"]!=""){
                             echo "<i class='fa-solid fa-triangle-exclamation'></i><span class='error_hover'>";
                             echo $_SESSION["error_pass_confirm"];
                             echo "</span>";
@@ -97,7 +106,7 @@
                     <label for="phone">Phone Number
                     <span>
                         <?php
-                        if($_SESSION["error_phone"]!=""){
+                        if(isset($_SESSION["error_phone"]) && $_SESSION["error_phone"]!=""){
                             echo "<i class='fa-solid fa-triangle-exclamation'></i><span class='error_hover'>";
                             echo $_SESSION["error_phone"];
                             echo "</span>";
@@ -110,7 +119,7 @@
                     <label class="second_input" for="adress">Adress
                     <span>
                         <?php
-                        if($_SESSION["error_adress"]!=""){
+                        if(isset($_SESSION["error_adress"]) && $_SESSION["error_adress"]!=""){
                             echo "<i class='fa-solid fa-triangle-exclamation'></i><span class='error_hover'>";
                             echo $_SESSION["error_adress"];
                             echo "</span>";
