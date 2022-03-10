@@ -107,7 +107,7 @@
             while($res = $data->fetch_assoc()){
                 echo "
                 <div>
-                    <a href="."#".">
+                    <a href="."product-details.php?id=".$res["idProduit"]."".">
                     <img src='".$res["image"]."'>
                     <p>".$res["libelle"]."</p>
                     </a>

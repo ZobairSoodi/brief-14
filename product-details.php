@@ -17,22 +17,30 @@
         <p>SKINCARE</p>
     </div>
     <div class="product-details">
-        <img src="images/t.jpg" id="product-image">
+        <?php
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "brief14";
+            
+            $conn = new mysqli($servername, $username, $password, $dbname);
+            
+            $sql = "SELECT * FROM produit WHERE idProduit = ".$_GET["id"].";";
+            $data = $conn->query($sql);
+            $res = $data->fetch_assoc();
+        ?>
+        <img src="<?php echo $res["image"] ?>" id="product-image">
         <div id="lable-area">
-            <h2>shape tape™ glow wand</h2>
-            <h1>360 DH</h1>
+            <h2><?php echo $res["libelle"] ?></h2>
+            <h1><?php echo $res["prix"] ?> DH</h1>
             <h4>Product details</h4>
-            <p id="dt">sheer liquid brightener
-                delivers a natural, lit-from-within youthful glow
-                brightens your features without glitter or shimmer
-                diamond complex™ for a soft-focus finish
-                instantly gives you 8 hrs of beauty sleep</p>
+            <p id="dt"><?php echo $res["description"] ?></p>
                 <div class="buy-part">
                     <button class="buy-button"><p>BUY NOW</p></button>
                     <div class="control-part">
-                        <button class="num-control"><img src="/images/minus.png"></button>
+                        <button class="num-control"><img src="images/minus.png"></button>
                         <input type="text" id="unics-num">
-                        <button class="num-control"><img src="/images/plus.png"></button>
+                        <button class="num-control"><img src="images/plus.png"></button>
                     </div>
                 </div>
         </div>
@@ -41,22 +49,22 @@
         <h4>Sponsored items customers also bought</h4>
         <div id="recomanded-products">
             <a href="#" class="recomanded-products">
-                <img src="/images/t.jpg">
+                <img src="images/t.jpg">
                 <h3>maneater mascara</h3>
                 <h3>270 DH</h3>
             </a>
             <a href="#" class="recomanded-products">
-                <img src="/images/t.jpg">
+                <img src="images/t.jpg">
                 <h3>maneater mascara</h3>
                 <h3>270 DH</h3>
             </a>
             <a href="#" class="recomanded-products">
-                <img src="/images/t.jpg">
+                <img src="images/t.jpg">
                 <h3>maneater mascara</h3>
                 <h3>270 DH</h3>
             </a>
             <a href="#" class="recomanded-products">
-                <img src="/images/t.jpg">
+                <img src="images/t.jpg">
                 <h3>maneater mascara</h3>
                 <h3>270 DH</h3>
             </a>
