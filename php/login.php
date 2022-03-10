@@ -22,6 +22,11 @@
     <title>Document</title>
 </head>
 <body>
+    <?php
+        if(isset($_SESSION["user_id"])){
+            echo $_SESSION["user_id"];
+        }
+    ?>
     <div id="form_parent">
         <div id="form_btns">
             <button id="login_btn" onmouseover="add_button_hover(this)" onmouseout="remove_button_hover(this)"
@@ -33,7 +38,7 @@
             >LOGIN</button>
             <button id="signup_btn" onmouseover="add_button_hover(this)" onmouseout="remove_button_hover(this)" 
             <?php  
-                if($_SESSION["error_signup"] && $_SESSION["error_signup"]==false){
+                if((isset($_SESSION["error_signup"]) && $_SESSION["error_signup"]==false)){
                     echo "class='form_inactive_signup'";
                 }
             ?>>SIGN UP</button>
@@ -41,11 +46,18 @@
         <div id="forms_div">
             <form id="login_form" action="connection.php" method="POST">
                 <div>
-                    <label for="email_login">Email</label><input type="text" id="email_login" name="email_login" placeholder="Enter your email">
+                    <label for="email_login">Email
+                    <span>
+                    </label><input type="text" id="email_login" name="email_login" placeholder="Enter your email">
                 </div>
                 <div>
                     <label for="pass_login">Password</label><input type="text" id="pass_login" name="pass_login" placeholder="Enter your password">
+                    <?php
+                        show_error("error_login");
+                    ?></span>
+                    </span>
                 </div>
+                
                 <input type="submit" name="login_submit" value="LOG IN">
             </form>
             <form id="signup_form" action="connection.php" method="POST">
@@ -71,7 +83,8 @@
                     <span>
                         <?php
                             show_error("error_email");
-                        ?></span>
+                        ?>
+                    </span>
                     </span>
                     </label><input type="email" name="email_signup" id="email_signup" placeholder="Email">
                 </div>
@@ -114,6 +127,13 @@
                 <div>
                     <input type="submit" name="signup_submit" value="SIGN UP">
                 </div>
+                <span style="color:green;">
+                    <?php
+                        if(isset($_SESSION["account_created"])){
+                            echo $_SESSION["account_created"];
+                        }
+                    ?>
+                </span>
             </form>
         </div>
     </div>

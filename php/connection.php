@@ -19,7 +19,7 @@
         $adress = $_POST["adress"];
         $_SESSION["error_adress"] = "";
         $_SESSION["email_exists_error"] = "";
-        $sql = "SELECT * FROM client WHERE email = '$email';";
+        $sql = "SELECT idClient FROM client WHERE email = '$email';";
         $data = $conn->query($sql);
         $res = $data->fetch_assoc();
         if(empty($res)){
@@ -54,6 +54,7 @@
             if($error == false){
                 $sql = "INSERT INTO client (`prenom`, `nom`, `email`, `pass`, `telephone`, `adresse`) VALUES('$fname','$lname','$email','$pass','$phone','$adress')";
                 $conn->query($sql);
+                $_SESSION["account_created"] = "Account created successfully";
             }
             header("location: login.php");
         }
@@ -65,17 +66,18 @@
     }
     if(isset($_POST["login_submit"])){
         $email = $_POST["email_login"];
+        $_SESSION["error_login"] = "";
         $pass = $_POST["pass_login"];
-        $sql = "SELECT * FROM client WHERE email = '$email' AND pass = '$pass';";
+        $sql = "SELECT idClient FROM client WHERE email = '$email' AND pass = '$pass';";
         $data = $conn->query($sql);
         $res = $data->fetch_assoc();
         if(!empty($res)){
-            foreach ($res as $key => $value) {
-                echo "$key = $value <br>";
-            }
+            header("location: login.php");
+            $_SESSION["user_id"] = $res["idClient"];
         }
         else{
-            echo "User does not exist!";
+            $_SESSION["error_login"] = "Incorrect username or password!";
+            header("location: login.php");
         }
     }
 ?>
