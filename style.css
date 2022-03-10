@@ -400,3 +400,143 @@ textarea{
     border: none;
 
 }
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@300&family=Indie+Flower&family=Reem+Kufi&display=swap');
+body {
+    margin: 0px 0px;
+    font-family: 'Reem Kufi', sans-serif;
+    color: #222;
+}
+body div {
+    margin: 30px 0px;
+}
+input {
+    outline: none;
+}
+.category-list {
+    margin: 0;
+    height: 100px;
+    background-color: #F5F5F5;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.category-list p {
+    margin: 0px 40px;
+    font-size: 24px;
+    color: #222;
+}
+.product-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+#product-image {
+    width: 482px;
+    height: 482px;
+}
+#lable-area {
+
+    
+}
+#unics-num {
+    width: 40px;
+    height: 40px;
+}
+.control {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.control-part {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+.control-part button {
+    background-color: transparent;
+    border: 1px solid #C4C4C4;
+    margin: 0px 10px;
+}
+.control-part input {
+    border: 1px solid #C4C4C4;
+}
+.num-control {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+}
+.num-control img {
+    width: 25px;
+}
+.buy-part {
+    display: flex;
+    flex-direction: row;
+}
+#other-products {
+text-align: center;
+margin: 50px 0px;
+padding: 20px;
+background-color: #F5F5F5;
+}
+#other-products h4 {
+    margin-bottom: 50px;
+    color: #222;
+}
+.buy-button {
+    height: 50px;
+    width: 200px;
+    border: 0px solid;
+    background-color: #EDDBFF;
+    font-family: 'Reem Kufi', sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+}
+.buy-part {
+    display: flex;
+    align-items: center;
+    
+}
+.recomanded-products {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.recomanded-products img {
+    width: 215px;
+    height: 215px;
+    padding: 10px;
+    background-color: #fff;
+}
+#dt {
+    width: 400px;
+}
+#unics-num {
+    text-align: center;
+}
+#recomanded-products {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+#recomanded-products a {
+    color: #222;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
