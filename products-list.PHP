@@ -40,7 +40,7 @@
         <div class="pub">
 
         </div>
-        <div class="our-product">
+        <!-- <div class="our-product">
             <p>Our Product</p>
             <div class="our-product-photo">
                 <div>
@@ -89,9 +89,65 @@
                     <p>price</p>
                 </div>
             </div>
-        </div>
+        </div> -->
+        <div class="our-product">
+        <p>Our Product</p>
+        <div class="our-product-photo">
+        
+        <?php
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "brief14";
+            
+            $conn = new mysqli($servername, $username, $password, $dbname);
+            
+            $sql = "SELECT * FROM produit LIMIT 6;";
+            $data = $conn->query($sql);
+            while($res = $data->fetch_assoc()){
+                echo "
+                <div>
+                    <a href="."#".">
+                    <img src='".$res["image"]."'>
+                    <p>".$res["libelle"]."</p>
+                    </a>
+                    <p>".$res["prix"]."</p>
+                </div>
+                ";
+            }
+        ?>
+            </div>
+    </div>
     </main>
+    <!-- <?php
+ 
 
+ $servername = "localhost";
+ $username = "root";
+ $password = "";
+ $dbname = "brief14";
+
+ // Faire l'appel
+ $conn = new mysqli($servername, $username, $password, $dbname);
+
+ $sql = "SELECT libelle, description, prix, image  FROM produit";
+
+$result = $conn->query($sql);
+
+    if ($result->num_rows> 0) {
+        while($row = $result->fetch_assoc()) {
+            echo "<tr>"."<td>". $row["libelle"]."</td>"."<td>". $row["description"]."</td>"."<td>". $row["prix"]."</td>"."<td>". $row["prix"]."</td>"."</tr>";
+            // echo "<tr><td> " . $row["Matricule"]."</td>"."<td>". $row["Nom"]."</td>"."<td>". $row["Prénom"]."</td>"."<td>". $row["Date"]."</td>". "<td>". $row["Département"]."</td>"."<td>". $row["Salaire"]."</td>"."<td>". $row["Fonction"]."</td>"."<td>" . "<img src=".$row['Photo'].' width=100px height="100px">'."</td>"."<td>"."<button>Delete</button><button>Edite</button>"."</td></tr>";
+        }
+        echo "</table>";
+    } else {
+        echo "0 results";
+    }
+
+
+     ?> -->
+
+    
     <div id="container">
         <div id="part1">
             <div id="companyinfo"> <a id="sitelink" href="#"  style="color: black;">Contact Us</a>
@@ -117,42 +173,5 @@
         </div>
     </div>
 
-    <?php
- 
-
- $servername = "localhost";
- $username = "root";
- $password = "";
- $dbname = "brief14";
-
- // Faire l'appel
- $conn = new mysqli($servername, $username, $password, $dbname);
-
- $sql = "SELECT libelle, description, prix, image  FROM produit";
-
-$result = $conn->query($sql);
-
-    if ($result->num_rows> 0) {
-        echo "<table>
-        <tr>
-        <th>libelle</th>
-        <th>description</th>
-        <th>prix</th>
-        <th>image</th>
-        </tr>";
-
     
-        while($row = $result->fetch_assoc()) {
-            echo "<tr>"."<td>". $row["libelle"]."</td>"."<td>". $row["description"]."</td>"."<td>". $row["prix"]."</td>"."<td>". $row["prix"]."</td>"."</tr>";
-            // echo "<tr><td> " . $row["Matricule"]."</td>"."<td>". $row["Nom"]."</td>"."<td>". $row["Prénom"]."</td>"."<td>". $row["Date"]."</td>". "<td>". $row["Département"]."</td>"."<td>". $row["Salaire"]."</td>"."<td>". $row["Fonction"]."</td>"."<td>" . "<img src=".$row['Photo'].' width=100px height="100px">'."</td>"."<td>"."<button>Delete</button><button>Edite</button>"."</td></tr>";
-
-        }
-        echo "</table>";
-    } else {
-        echo "0 results";
-    }
-
-
-     ?>
-
 
