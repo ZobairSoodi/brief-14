@@ -128,7 +128,7 @@
  // Faire l'appel
  $conn = new mysqli($servername, $username, $password, $dbname);
 
- $sql = "SELECT libelle, description, prix, DateDeNaissanse, image  FROM produit";
+ $sql = "SELECT libelle, description, prix, image  FROM produit";
 
 $result = $conn->query($sql);
 
