@@ -19,14 +19,40 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ab021e0629.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/navbar.css">
     <title>Document</title>
 </head>
 <body>
-    <?php
-        if(isset($_SESSION["user_id"])){
-            echo $_SESSION["user_id"];
-        }
+<?php
+        $conn = new mysqli("localhost", "root", "", "brief14");
     ?>
+    <nav style="position:sticky !important;">
+        <div>
+            <div>
+                LOGO
+            </div>
+            <div>
+                <ul>
+                    <li>Home</li>
+                    <li>Products</li>
+                </ul>
+            </div>
+            <div>
+                <span>
+                    <?php
+                        if(isset($_SESSION["user_id"])){
+                            $user = $_SESSION["user_id"];
+                            $sql = "SELECT * FROM Client WHERE idClient = $user";
+                            $data = $conn->query($sql);
+                            $res = $data->fetch_assoc();
+                            echo $res["nom"]." ".$res["prenom"];
+                        }
+                    ?>    
+                <i class="fa-solid fa-user"></i></span>
+                <span><i class="fa-solid fa-cart-shopping"></i></span>
+            </div>
+        </div>
+    </nav>
     <div id="form_parent">
         <div id="form_btns">
             <button id="login_btn" onmouseover="add_button_hover(this)" onmouseout="remove_button_hover(this)"
@@ -88,23 +114,23 @@
                     </span>
                     </label><input type="email" name="email_signup" id="email_signup" placeholder="Email">
                 </div>
-                <div>
+                <div  class="is_double_input">
                     <label for="pass_signup">Password
                     <span>
                         <?php
                         show_error("error_pass");
                     ?></span>
                     </span>
-                    </label><input type="password" name="pass_signup" id="pass_signup" placeholder="Password" minlength="8">
+                    </label><input type="password" name="pass_signup" id="pass_signup" placeholder="Password">
                 </div>
-                <div>
-                    <label for="pass_confirm">Confirsm Password
+                <div  class="is_double_input">
+                    <label class="second_input" for="pass_confirm">Confirsm Password
                     <span>
                         <?php
                             show_error("error_pass_confirm");
                         ?></span>
                     </span>
-                    </label><input type="password" name="pass_confirm" id="pass_confirm" placeholder="Confirsm Password">
+                    </label><input class="second_input" type="password" name="pass_confirm" id="pass_confirm" placeholder="Confirsm Password">
                 </div>
                 <div class="is_double_input">
                     <label for="phone">Phone Number
