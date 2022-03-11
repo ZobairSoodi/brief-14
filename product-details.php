@@ -35,14 +35,16 @@
             <h1><?php echo $res["prix"] ?> DH</h1>
             <h4>Product details</h4>
             <p id="dt"><?php echo $res["description"] ?></p>
-                <div class="buy-part">
-                    <button class="buy-button"><p>BUY NOW</p></button>
-                    <div class="control-part">
-                        <button onclick="change_quantity('minus')" class="num-control"><img src="images/minus.png"></button>
-                        <input type="number" value="1" id="unics-num">
-                        <button onclick="change_quantity('plus')" class="num-control"><img src="images/plus.png"></button>
+                <form action="order.php?id=<?php echo $_GET["id"] ?>" method="POST">
+                    <div class="buy-part">
+                        <input type="submit" value="BUY NOW" class="buy-button">
+                        <div class="control-part">
+                            <button type="button" onclick="change_quantity('minus')" class="num-control"><img src="images/minus.png"></button>
+                            <input type="number" name="quantity" value="1" id="unics-num">
+                            <button type="button" onclick="change_quantity('plus')" class="num-control"><img src="images/plus.png"></button>
+                        </div>
                     </div>
-                </div>
+                </form>
         </div>
     </div>
     <div id="other-products">
