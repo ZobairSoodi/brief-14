@@ -38,9 +38,9 @@
                 <div class="buy-part">
                     <button class="buy-button"><p>BUY NOW</p></button>
                     <div class="control-part">
-                        <button class="num-control"><img src="images/minus.png"></button>
-                        <input type="text" id="unics-num">
-                        <button class="num-control"><img src="images/plus.png"></button>
+                        <button onclick="change_quantity('minus')" class="num-control"><img src="images/minus.png"></button>
+                        <input type="number" value="1" id="unics-num">
+                        <button onclick="change_quantity('plus')" class="num-control"><img src="images/plus.png"></button>
                     </div>
                 </div>
         </div>
@@ -71,5 +71,6 @@
 
         </div>
     </div>
+    <script src="product-details.js"></script>
 </body>
 </html>
