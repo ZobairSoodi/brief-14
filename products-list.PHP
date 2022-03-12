@@ -40,56 +40,6 @@
         <div class="pub">
 
         </div>
-        <!-- <div class="our-product">
-            <p>Our Product</p>
-            <div class="our-product-photo">
-                <div>
-                    <img src="images\t.jpg">
-                    <p>here the product name</p>
-                    <p>price</p>
-                </div>
-                <div>
-                    <img src="images\t.jpg">
-                    <p>here the product name</p>
-                    <p>price</p>
-                </div>
-                <div>
-                    <img src="images\t.jpg">
-                    <p>here the product name</p>
-                    <p>price</p>
-                </div>
-                <div>
-                    <img src="images\t.jpg">
-                    <p>here the product name</p>
-                    <p>price</p>
-                </div>
-                <div>
-                    <img src="images\t.jpg">
-                    <p>here the product name</p>
-                    <p>price</p>
-                </div>
-                <div>
-                    <img src="images\t.jpg">
-                    <p>here the product name</p>
-                    <p>price</p>
-                </div>
-                <div>
-                    <img src="images\t.jpg">
-                    <p>here the product name</p>
-                    <p>price</p>
-                </div>
-                <div>
-                    <img src="images\t.jpg">
-                    <p>here the product name</p>
-                    <p>price</p>
-                </div>
-                <div>
-                    <img src="images\t.jpg">
-                    <p>here the product name</p>
-                    <p>price</p>
-                </div>
-            </div>
-        </div> -->
         <div class="our-product">
         <p>Our Product</p>
         <div class="our-product-photo">

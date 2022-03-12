@@ -3,8 +3,8 @@
 /* Date de cr�ation :  28/02/2022 13:43:56                      */
 /*==============================================================*/
 
-CREATE DATABASE brief_14;
-USE brief_14;
+CREATE DATABASE brief14;
+USE brief14;
 
 drop table if exists Client;
 
@@ -19,14 +19,13 @@ drop table if exists Produit;
 /*==============================================================*/
 create table Client
 (
-   idClient             int not null,
+   idClient             int primary key AUTO_INCREMENT,
    nom                  varchar(254),
    prenom               varchar(254),
    adresse              varchar(254),
    telephone            varchar(254),
    email                varchar(254),
-   pass                 varchar(254),
-   primary key (idClient)
+   pass                 varchar(254)
 );
 
 /*==============================================================*/
@@ -34,11 +33,10 @@ create table Client
 /*==============================================================*/
 create table Commande
 (
-   idCommande           int not null,
+   idCommande           int primary key AUTO_INCREMENT,
    idClient             int not null,
    date                 datetime,
-   adresseLivraison     varchar(254),
-   primary key (idCommande)
+   adresseLivraison     varchar(254)
 );
 
 /*==============================================================*/
