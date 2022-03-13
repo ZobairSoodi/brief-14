@@ -1,4 +1,5 @@
 <?php
+    include 'conn.php';
     session_start(); 
     function show_error($er){
         if(isset($_SESSION[$er]) && $_SESSION[$er]!=""){
@@ -23,9 +24,6 @@
     <title>Document</title>
 </head>
 <body>
-<?php
-        $conn = new mysqli("localhost", "root", "", "brief14");
-    ?>
     <nav style="position:sticky !important;">
         <div>
             <div>

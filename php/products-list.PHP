@@ -1,7 +1,4 @@
-
-<?php
-
-?>
+<?php include 'conn.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,29 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/navbar.css">
 </head>
 <body>
+    <?php include 'navbar.php' ?>
     <header>
-        <img src="images\background.png">
+        <img src="../images\background.png">
     </header>
     <main> 
         <div class="best-seller-area">
             <p>Best Sellers</p>
             <div class="best-seller-photos">
                 <div>
-                    <img src="images\t.jpg">
+                    <img src="../images\t.jpg">
                     <div>></div>
                     <p>here the product name</p>
                     <p>price</p>
                 </div>
                 <div>
-                    <img src="images\t.jpg">
+                    <img src="../images\t.jpg">
                     <p>here the product name</p>
                     <p>price</p>
                 </div>
                 <div>
-                    <img src="images\t.jpg">
+                    <img src="../images\t.jpg">
                     <p>here the product name</p>
                     <p>price</p>
                 </div>
@@ -45,12 +47,6 @@
         <div class="our-product-photo">
         
         <?php
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "brief14";
-            
-            $conn = new mysqli($servername, $username, $password, $dbname);
             
             $sql = "SELECT * FROM produit LIMIT 6;";
             $data = $conn->query($sql);

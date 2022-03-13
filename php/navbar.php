@@ -1,6 +1,4 @@
-    <?php
-        $conn = new mysqli("localhost", "root", "", "brief14");
-    ?>
+<?php include 'conn.php' ?>
     <nav>
         <div>
             <div>
@@ -9,7 +7,7 @@
             <div>
                 <ul>
                     <li>Home</li>
-                    <li>Products</li>
+                    <li><a href="products-list.php">Products</a></li>
                 </ul>
             </div>
             <div>
