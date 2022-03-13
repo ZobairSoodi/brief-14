@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #E5E5E5;
+}
+
+/* /////////////////////////////////////// */
+/******** LOGIN AND SIGN UP SECTION ********/
+#form_parent{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+#form_btns{
+    display: flex;
+    width: 60%;
+}
+#form_btns button{
+    width: 50%;
+    font-size: 30px;
+    font-family: 'Reem Kufi', sans-serif;
+    padding: 20px 0;
+    border: none;
+    background-color: #ffffff;
+    color: #C9B8A8;
+}
+form div input{
+    padding: 0 0 0 15px;
+    font-family: 'reem kufi', 'sans-serif';
+    font-size: 15px;
+    outline: none;
+    border: solid 2px #949191;
+    border-radius: 5px;
+    background-color: #FCF9F9;
+    height: 40px;
+}
+#forms_div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    background-color: #ffffff;
+    height: 80vh;
+    position: relative;
+}
+
+#forms_div form{
+    width: 80%;
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    transition: all 0.2s;
+}
+#login_form{
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+#login_form div{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+#login_form:nth-child(1){
+    margin: 20px;
+}
+#login_form div input{
+    width: 100%;
+}
+#login_form>input{
+    font-family: 'reem kufi', 'sans-serif';
+    font-size: 22px;
+    border: solid 2px #7A7474;
+    background-color: #CABFB3;
+    padding: 5px 60px;
+    margin-top: 90px;
+}
+form label{
+    font-family: 'reem kufi', 'sans-serif';
+    font-size: 20px;
+    color: #2F2E2E;
+}
+
+form div input::placeholder{
+    font-family: 'reem kufi', 'sans-serif';
+    font-size: 15px;
+}
+#signup_form{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0;
+}
+.form_inactive_signup{
+    background-color: #D1CBC5 !important;
+    color: #FFFFFF !important;
+    box-shadow: 5px -5px 1px 0px #00000040 inset;
+}
+.form_inactive_login{
+    background-color: #D1CBC5 !important;
+    box-shadow: -5px -5px 1px 0px #00000040 inset;
+    color: #FFFFFF !important;
+}
+#signup_form{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+#signup_form>div{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+}
+.is_double_input{
+    width: 47.5% !important;
+}
+.is_double_input input{
+    width: 90%;
+}
+.second_input{
+    margin-left: 10%;
+}
+
+.hover_button{
+    background-color: #9d9894 !important;
+    transition: all 0.2s cubic-bezier(0.52, 0.08, 0.9, 0.62);
+}
+#form_btns{
+    transition: none;
+}
+form i{
+    color: red;
+}
+.error_hover{
+    position: absolute;
+    background-color: white;
+    border: solid 2px red;
+    display: none;
+}
+form i:hover + .error_hover{
+    display: block;
+}
