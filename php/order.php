@@ -30,5 +30,5 @@
         $order_id, $idClient, $quantity
     );";
     $conn->query($sql_insert_details);
-    header("location: products_list.php");
+    header("location: products-list.php");
 ?>

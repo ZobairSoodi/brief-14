@@ -1,6 +1,6 @@
 <?php
     include 'conn.php';
-    session_start(); 
+    session_start();
     function show_error($er){
         if(isset($_SESSION[$er]) && $_SESSION[$er]!=""){
             echo "<i class='fa-solid fa-triangle-exclamation'></i><span class='error_hover'>";
