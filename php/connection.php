@@ -26,15 +26,15 @@
         $res = $data->fetch_assoc();
         
         if(empty($res)){
-            if(!preg_match("/[a-zA-Z]{5,}/", $fname)){
-                $_SESSION["error_fname"] = "Your firstname should contain only letters and should be 5 characters minimum!";
+            if(!preg_match("/[a-zA-Z\s]{3,}/", $fname)){
+                $_SESSION["error_fname"] = "Your firstname should contain only letters and should be 3 characters minimum!";
                 $error = true;
             }
-            if(!preg_match("/[a-zA-Z]{5,}/", $lname)){
-                $_SESSION["error_lname"] = "Your lastname should contain only letters and should be 5 characters minimum!";
+            if(!preg_match("/[a-zA-Z\s]{3,}/", $lname)){
+                $_SESSION["error_lname"] = "Your lastname should contain only letters and should be 3 characters minimum!";
                 $error = true;
             }
-            if(!preg_match("/\w+@gmail\.com/", $email)){
+            if(!preg_match("/^\w+@gmail\.com$/", $email)){
                 $_SESSION["error_email"] = "invalid email format!";
                 $error = true;
             }
