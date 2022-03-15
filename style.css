@@ -358,3 +358,6 @@ table{
     margin-top: -240px;
     margin-left: -40px;
 }
+td img {
+    width: 70px;
+}
