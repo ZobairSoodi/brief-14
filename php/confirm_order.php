@@ -1,3 +1,8 @@
+<?php
+    if(isset($_POST["add_to_cart"])){
+        header("location: add_to_cart.php?id=".$_GET['id']."");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
