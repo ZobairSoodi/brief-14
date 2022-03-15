@@ -11,6 +11,33 @@
 </head>
 <body>
     
+  <nav style="position:sticky !important;">
+    <div>
+        <div>
+            LOGO
+        </div>
+        <div>
+            <ul>
+                <li>Home</li>
+                <li>Products</li>
+            </ul>
+        </div>
+        <div>
+            <span>
+                <?php
+                    if(isset($_SESSION["user_id"])){
+                        $user = $_SESSION["user_id"];
+                        $sql = "SELECT * FROM Client WHERE idClient = $user";
+                        $data = $conn->query($sql);
+                        $res = $data->fetch_assoc();
+                        echo $res["nom"]." ".$res["prenom"];
+                    }
+                ?>    
+            <i class="fa-solid fa-user"></i></span>
+            <span><i class="fa-solid fa-cart-shopping"></i></span>
+        </div>
+    </div>
+</nav>
 
     <section class="intro">
         
