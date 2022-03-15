@@ -37,7 +37,8 @@
             <p id="dt"><?php echo $res["description"] ?></p>
                 <form action="confirm_order.php?id=<?php echo $_GET["id"] ?>" method="POST">
                     <div class="buy-part">
-                        <input type="submit" value="BUY NOW" class="buy-button">
+                        <input type="submit" name="add_to_cart" value="ADD TO CART" class="buy-button">
+                        <input type="submit" name="buy_now" value="BUY NOW" class="buy-button">
                         <div class="control-part">
                             <button type="button" onclick="change_quantity('minus')" class="num-control"><img src="../images/minus.png"></button>
                             <input type="number" name="quantity" value="1" id="unics-num">
