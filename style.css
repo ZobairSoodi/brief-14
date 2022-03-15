@@ -393,3 +393,40 @@ nav li:hover{
 nav span{
     margin-left: 10px;
 }
+.num-control img {
+    width: 25px;
+}
+.num-control {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+}
+
+#unics-num {
+    width: 40px;
+    height: 40px;
+}
+.control {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.control-part {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+.control-part button {
+    background-color: transparent;
+    border: 1px solid #C4C4C4;
+    margin: 0px 10px;
+}
+.control-part input {
+    border: 1px solid #C4C4C4;
+}
