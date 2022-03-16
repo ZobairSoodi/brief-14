@@ -1,3 +1,15 @@
+<?php
+  session_start();
+  include 'conn.php';
+  if( isset($_SESSION["first_add"]) && $_SESSION["first_add"]==true){
+    if(!isset($_SESSION["cart"])){
+      $_SESSION["cart"] = [];
+    }
+    $obj = (object) ["id_product"=>$_GET["id"],"quantity"=>$_GET["quantity"]];
+    array_push($_SESSION["cart"], $obj);
+    $_SESSION["first_add"] = false;
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,6 +60,7 @@
                       <thead>
                         <tr>
                           <th scope="col">Photo</th>
+                          <th scope="col">Label</th>
                           <th scope="col">Price</th>
                           <th scope="col">Units</th>
                           <th scope="col">Sub total</th>
@@ -56,22 +69,28 @@
                         </tr>
                       </thead>
                       <tbody>
+                      <?php 
+                        foreach ($_SESSION["cart"] as $value) {
+                          $sql = "SELECT * FROM produit WHERE idProduit = ".$value->id_product;
+                          $data = $conn->query($sql);
+                          $res = $data->fetch_assoc();
+                      ?>
                         <tr>
-                          <td scope="row"><img src="prod.jpg" alt=""></td>
-                          <td>1200</td>
+                          <td scope="row"><img src="<?php echo $res["image"] ?>" alt=""></td>
+                          <td><?php echo $res["libelle"] ?></td>
+                          <td><?php echo $res["prix"] ?></td>
                           <td>    
                         <div class="control-part">
                             <button class="num-control"><img src="../images/minus.png"></button>
-                            <input type="text" id="unics-num">
+                            <input type="text" value="<?php echo $value->quantity ?>" id="unics-num">
                             <button class="num-control"><img src="../images/plus.png"></button>
                         </div>
                       </td>
                           <td>61</td>
                           <td>Edinburgh</td>
-                          <td>$320,800</td>
+                          <td><?php echo $res["prix"]*$value->quantity ?></td>
                         </tr>
-
-
+                        <?php }?>
                       </tbody>
                     </table>
                   </div>
@@ -108,6 +127,6 @@
             </div>
         </div>
     </footer>
-
+    
 </body>
 </html>
