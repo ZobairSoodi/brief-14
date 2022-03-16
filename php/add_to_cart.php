@@ -63,7 +63,6 @@
                           <th scope="col">Label</th>
                           <th scope="col">Price</th>
                           <th scope="col">Units</th>
-                          <th scope="col">delivery</th>
                           <th scope="col">Sub total</th>
                         </tr>
                       </thead>
@@ -87,7 +86,6 @@
                             <button class="num-control"><img src="../images/plus.png"></button>
                         </div>
                       </td>
-                          <td>Edinburgh</td>
                           <td><?php echo $res["prix"]*$value->quantity ?></td>
                         </tr>
                         <?php }?>
