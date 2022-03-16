@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/navbar.css">
     <title>Document</title>
 </head>
 <body>
@@ -58,9 +60,9 @@
                           <td scope="row"><img src="prod.jpg" alt=""></td>
                           <td>1200</td>
                           <td>    <div class="control-part">
-                            <button class="num-control"><img src="minus.png"></button>
+                            <button class="num-control"><img src="../images/minus.png"></button>
                             <input type="text" id="unics-num">
-                            <button class="num-control"><img src="plus.png"></button>
+                            <button class="num-control"><img src="../images/plus.png"></button>
                         </div>
                       </td>
                           <td>61</td>
