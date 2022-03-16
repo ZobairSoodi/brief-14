@@ -59,7 +59,8 @@
                         <tr>
                           <td scope="row"><img src="prod.jpg" alt=""></td>
                           <td>1200</td>
-                          <td>    <div class="control-part">
+                          <td>    
+                        <div class="control-part">
                             <button class="num-control"><img src="../images/minus.png"></button>
                             <input type="text" id="unics-num">
                             <button class="num-control"><img src="../images/plus.png"></button>
