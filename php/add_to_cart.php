@@ -63,22 +63,23 @@
                           <th scope="col">Label</th>
                           <th scope="col">Price</th>
                           <th scope="col">Units</th>
-                          <th scope="col">Sub total</th>
                           <th scope="col">delivery</th>
-                          <th scope="col">Total</th>
+                          <th scope="col">Sub total</th>
                         </tr>
                       </thead>
                       <tbody>
                       <?php 
+                        $total = 0;
                         foreach ($_SESSION["cart"] as $value) {
                           $sql = "SELECT * FROM produit WHERE idProduit = ".$value->id_product;
                           $data = $conn->query($sql);
                           $res = $data->fetch_assoc();
+                          $total+=$res["prix"]*$value->quantity;
                       ?>
                         <tr>
                           <td scope="row"><img src="<?php echo $res["image"] ?>" alt=""></td>
-                          <td><?php echo $res["libelle"] ?></td>
-                          <td><?php echo $res["prix"] ?></td>
+                          <td><?php echo $res["libelle"]; ?></td>
+                          <td><?php echo $res["prix"]; ?>$</td>
                           <td>    
                         <div class="control-part">
                             <button class="num-control"><img src="../images/minus.png"></button>
@@ -86,13 +87,13 @@
                             <button class="num-control"><img src="../images/plus.png"></button>
                         </div>
                       </td>
-                          <td>61</td>
                           <td>Edinburgh</td>
                           <td><?php echo $res["prix"]*$value->quantity ?></td>
                         </tr>
                         <?php }?>
                       </tbody>
                     </table>
+                          TOTAL: <?php echo $total; ?>$
                   </div>
                 </div>
               </div>
