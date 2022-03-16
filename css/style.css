@@ -1,99 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;500&display=swap');
-
-
-/*M A I N  S T Y L E */
-
-
-
-body {
-    margin: 0;
+body{
+    margin-top: 0;
     padding: 0;
-    font-weight: 400;
-    font-family: 'Reem Kufi', sans-serif;
 }
-main p {
-    color: #522D6D;
-    font-size: 42px;
-}
-header img {
-    width: 100%;
-    display: flex;
-}
-
-
-/* PUBLICATION AREA*/
-.pub{
-    width: 100%;
-    height: 200px;
-}
-
-
-/* BEST SELLER SECTION */
-.best-seller-area {
-    background: #CACFCB;
-    background: linear-gradient(180deg, #CACFCB 0%, rgba(245, 245, 245, 1) 100%);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px;
-} 
-.best-seller-photos {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.best-seller-photos img {
-    background-color: rgb(255, 255, 255);
-    padding: 10PX;
-    width: 200px;
-    height: 200px;
-    box-shadow: rgba(0, 0, 0, 0.253) 0px 4px 4px;
-}
-.best-seller-area p {
-    margin: 72px;
-}
-.best-seller-photos p {
-    color:  #111;
-    font-size: 29px;
-    margin: 0px;
-}
-
-/* PRODUCTS SECTION */
-
-.our-product {
-    background-color: rgba(245, 245, 245, 1);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-}
-.our-product-photo  {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-}
-.our-product-photo>div{
-    width: 33.33%;
-    margin: 20px 0;
-}
-.our-product-photo img {
-    background-color: rgb(255, 255, 255);
-    padding: 10PX;
-    width: 200px;
-    height: 200px;
-}
-.our-product-photo p  {
-    color:  #111;
-    font-size: 29px;
-    margin: 0px;
-}
-
-
-
-
-
-
 #container {
     width: 100%;
     height: 330px
@@ -370,7 +278,7 @@ header img {
     width: 170px;
     background-color: #949191af;
     border: none;
-    height: 30px;
+    height: 40px;
     cursor: pointer;
 }
 #Submit:hover{
@@ -400,47 +308,103 @@ textarea{
     border: none;
 
 }
-@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@300&family=Indie+Flower&family=Reem+Kufi&display=swap');
-body {
-    margin: 0px 0px;
-    font-family: 'Reem Kufi', sans-serif;
-    color: #222;
+
+
+
+
+
+
+
+html,
+body,
+.intro {
+  height: 100%;
 }
-body div {
-    margin: 30px 0px;
+
+.gradient-custom-1 {
+  /* fallback for old browsers */
+  background: #cd9cf2;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to top, #F5F5F5, #F5F5F5);
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to top, #F5F5F5, #F5F5F5)
 }
-input {
-    outline: none;
+
+table td,
+table th {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
-.category-list {
+tbody td {
+  font-weight: 500;
+  color: #999999;
+}
+
+
+.firstdiv{
+    background-color: #B8A898;
+}
+.firstdiv p{
+    text-align: center;
+}
+table{
+    /* position: absolute;
+    margin-top: -240px;
+    margin-left: -40px; */
+}
+td img {
+    width: 70px;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(139, 131, 131, 0.27);
+    font-family: 'Reem K-ufi', sans-serif;
+    font-size: 24px;
+    color: #522D6D;
+    margin-top: -16px;
+    z-index: 5;
+}
+nav>div{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    padding: 20px 0;
+    
+}
+nav ul{
     margin: 0;
-    height: 100px;
-    background-color: #F5F5F5;
+}
+nav li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 30px;
+    cursor: pointer;
+}
+nav li:hover{
+    color: #1f0830;
+}
+nav span{
+    margin-left: 10px;
+}
+.num-control img {
+    width: 25px;
+}
+.num-control {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: 25px;
+    height: 25px;
 }
-.category-list p {
-    margin: 0px 40px;
-    font-size: 24px;
-    color: #222;
-}
-.product-details {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-}
-#product-image {
-    width: 482px;
-    height: 482px;
-}
-#lable-area {
 
-    
-}
 #unics-num {
     width: 40px;
     height: 40px;
@@ -465,83 +429,4 @@ input {
 }
 .control-part input {
     border: 1px solid #C4C4C4;
-}
-.num-control {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 25px;
-    height: 25px;
-}
-.num-control img {
-    width: 25px;
-}
-.buy-part {
-    display: flex;
-    flex-direction: row;
-}
-#other-products {
-text-align: center;
-margin: 50px 0px;
-padding: 20px;
-background-color: #F5F5F5;
-}
-#other-products h4 {
-    margin-bottom: 50px;
-    color: #222;
-}
-.buy-button {
-    height: 50px;
-    width: 200px;
-    border: 0px solid;
-    background-color: #EDDBFF;
-    font-family: 'Reem Kufi', sans-serif;
-    text-transform: uppercase;
-    font-weight: 800;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 30px;
-}
-.buy-part {
-    display: flex;
-    align-items: center;
-    
-}
-.recomanded-products {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.recomanded-products img {
-    width: 215px;
-    height: 215px;
-    padding: 10px;
-    background-color: #fff;
-}
-#dt {
-    width: 400px;
-}
-#unics-num {
-    text-align: center;
-}
-#recomanded-products {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-
-}
-#recomanded-products a {
-    color: #222;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-}
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
 }
