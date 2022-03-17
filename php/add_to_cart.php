@@ -2,12 +2,23 @@
   session_start();
   include 'conn.php';
   if( isset($_SESSION["first_add"]) && $_SESSION["first_add"]==true){
+    $product_exist = false;
     if(!isset($_SESSION["cart"])){
       $_SESSION["cart"] = [];
     }
-    $obj = (object) ["id_product"=>$_GET["id"],"quantity"=>$_GET["quantity"]];
-    array_push($_SESSION["cart"], $obj);
-    $_SESSION["first_add"] = false;
+    for($i=0;$i<count($_SESSION["cart"]);$i++){
+      if($_SESSION["cart"][$i]->id_product==$_GET["id"]){
+        $_SESSION["cart"][$i]->quantity += $_GET["quantity"];
+        $product_exist = true;
+        $_SESSION["first_add"] = false;
+      }
+    }
+    if($product_exist == false){
+      $obj = (object) ["id_product"=>$_GET["id"],"quantity"=>$_GET["quantity"]];
+      array_push($_SESSION["cart"], $obj);
+      $_SESSION["first_add"] = false;
+    }
+    
   }
 ?>
 <!DOCTYPE html>
@@ -87,6 +98,7 @@
                         </div>
                       </td>
                           <td><?php echo $res["prix"]*$value->quantity ?></td>
+                          <td><a href="remove_from_cart.php"></a></td>
                         </tr>
                         <?php }?>
                       </tbody>
