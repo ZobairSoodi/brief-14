@@ -67,6 +67,11 @@
         }
         $_SESSION["error_signup"] = $error;
     }
+
+
+
+
+    ////////////////////////////////////////////////////////
     if(isset($_POST["login_submit"])){
         $email = $_POST["email_login"];
         $_SESSION["error_login"] = "";
