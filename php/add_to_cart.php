@@ -98,7 +98,7 @@
                         </div>
                       </td>
                           <td><?php echo $res["prix"]*$value->quantity ?></td>
-                          <td><a href="remove_from_cart.php"></a></td>
+                          <td><a href="remove_from_cart.php?id=<?php echo $res["idProduit"] ?>">X</a></td>
                         </tr>
                         <?php }?>
                       </tbody>
