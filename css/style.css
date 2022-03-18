@@ -1,5 +1,5 @@
 body{
-    margin-top: 0;
+    margin: 0;
     padding: 0;
 }
 #container {
@@ -310,13 +310,6 @@ textarea{
 }
 
 
-
-
-
-
-
-html,
-body,
 .intro {
   height: 100%;
 }
@@ -353,41 +346,6 @@ tbody td {
 
 td img {
     width: 70px;
-}
-nav{
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: rgba(139, 131, 131, 0.27);
-    font-family: 'Reem K-ufi', sans-serif;
-    font-size: 24px;
-    color: #522D6D;
-    margin-top: -16px;
-    z-index: 5;
-}
-nav>div{
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    padding: 20px 0;
-    
-}
-nav ul{
-    margin: 0;
-}
-nav li{
-    list-style: none;
-    display: inline-block;
-    margin-left: 30px;
-    cursor: pointer;
-}
-nav li:hover{
-    color: #1f0830;
-}
-nav span{
-    margin-left: 10px;
 }
 .num-control img {
     width: 25px;

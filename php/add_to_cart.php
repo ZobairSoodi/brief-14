@@ -43,8 +43,8 @@
             <div class="firstdiv">
                 <p>Free shipping on any $35 purchase</p>
             </div>
-
-            <nav style="position:sticky !important;">
+            <?php include 'navbar.php' ?>
+            <!-- <nav style="position:sticky !important;">
               <div>
                   <div>
                       LOGO
@@ -57,7 +57,7 @@
                   </div>
               
               </div>
-          </nav>
+          </nav> -->
           
             <h1 style="text-align: center; margin-top: 70px; color: #522D6D;">MY CART <i class="fa-solid fa-cart-shopping-fast"></i></h1>
 

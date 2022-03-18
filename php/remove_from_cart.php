@@ -1,8 +1,13 @@
 <?php
     session_start();
     foreach ($_SESSION["cart"] as $key => $value) {
-        echo $key."<br>";
+        if($_SESSION["cart"][$key]->id_product == $_GET["id"]){
+            unset($_SESSION["cart"][$key]);
+        }
     }
+    header("location: add_to_cart.php")
+
+
     // $_SESSION["cart"][3]->id_product;
     // for($i=0;$i<count($_SESSION["cart"]);$i++){
     //     if($_SESSION["cart"][$i]->id_product==$_GET["id"]){
