@@ -5,7 +5,7 @@
             unset($_SESSION["cart"][$key]);
         }
     }
-    header("location: add_to_cart.php")
+    header("location: add_to_cart.php");
 
 
     // $_SESSION["cart"][3]->id_product;
