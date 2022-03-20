@@ -6,12 +6,21 @@
     if(!isset($_SESSION["cart"])){
       $_SESSION["cart"] = [];
     }
-    for($i=0;$i<count($_SESSION["cart"]);$i++){
-      if($_SESSION["cart"][$i]->id_product==$_GET["id"]){
-        $_SESSION["cart"][$i]->quantity += $_GET["quantity"];
-        $product_exist = true;
-        $_SESSION["first_add"] = false;
-      }
+    // for($i=0;$i<count($_SESSION["cart"]);$i++){
+    //   if($_SESSION["cart"][$i]->id_product==$_GET["id"]){
+    //     $_SESSION["cart"][$i]->quantity += $_GET["quantity"];
+    //     $product_exist = true;
+    //     $_SESSION["first_add"] = false;
+    //   }
+    // }
+      foreach ($_SESSION["cart"] as $key => $value) {
+        if(isset($_SESSION["cart"][$key]->id_product)){
+          if($_SESSION["cart"][$key]->id_product==$_GET["id"]){
+            $_SESSION["cart"][$key]->quantity += $_GET["quantity"];
+            $product_exist = true;
+            $_SESSION["first_add"] = false;
+          }
+        }
     }
     if($product_exist == false){
       $obj = (object) ["id_product"=>$_GET["id"],"quantity"=>$_GET["quantity"]];
