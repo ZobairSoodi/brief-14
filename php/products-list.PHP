@@ -10,7 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/products-list.css">
     <link rel="stylesheet" href="../css/navbar.css">
-    <title>Document</title>
+    <title>GoDiva | Home</title>
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+    </style>
     
 </head>
 <body>
@@ -24,7 +29,6 @@
             <div class="best-seller-photos">
                 <div>
                     <img src="../images\t.jpg">
-                    <div>></div>
                     <p>here the product name</p>
                     <p>price</p>
                 </div>
@@ -43,8 +47,8 @@
         <div class="pub">
 
         </div>
-        <div class="our-product">
-        <p>Our Product</p>
+        <div class="our-product" id="our-products">
+        <p>Our Products</p>
         <div class="our-product-photo">
         
         <?php

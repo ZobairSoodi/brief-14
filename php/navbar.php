@@ -6,8 +6,8 @@
             </div>
             <div>
                 <ul>
-                    <li>Home</li>
-                    <li><a href="products-list.php">Products</a></li>
+                    <li><a href="products-list.php">Home</a></li>
+                    <li><a href="products-list.php#our-products">Products</a></li>
                 </ul>
             </div>
             <div>
