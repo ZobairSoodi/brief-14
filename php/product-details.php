@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/product-details.css">
+    <link rel="stylesheet" href="../css/products-list.css">
 </head>
 <body>
 <?php include 'navbar.php' ?>
