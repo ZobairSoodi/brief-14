@@ -2,7 +2,7 @@
     <nav>
         <div>
             <div>
-                LOGO
+                <img src="../images/logo.png">
             </div>
             <div>
                 <ul>
